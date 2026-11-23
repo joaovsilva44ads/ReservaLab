@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReservaLab — Gestão de equipamentos</title>
+<link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="logo">R.</span><span>Reserva<span class="brand-accent">Lab</span></span></div><div class="topmeta"><span class="pill">GESTÃO DE EQUIPAMENTOS</span><span class="online"><i></i> Sistema local</span></div></header>
+  <main class="shell">
+    <section class="hero"><div><p class="eyebrow">LABORATÓRIO DE TECNOLOGIA</p><h1>Seu equipamento,<br><em>na hora certa.</em></h1><p>Organize o empréstimo de recursos do laboratório e acompanhe todas as reservas em um só lugar.</p><span class="hint">Dica: crie uma reserva, reinicie o servidor e observe o que acontece.</span></div><div class="hero-art" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><div class="hero-icon">⌘</div><span class="dashes">· · · · · ·</span></div></section>
+    <section class="numbers" aria-label="Indicadores"><div class="stat"><p>Equipamentos</p><strong id="nEquip">—</strong><small>Disponíveis para reserva</small></div><div class="stat"><p>Reservas ativas</p><strong id="nAtivas">—</strong><small>Agendamentos em aberto</small></div><div class="stat"><p>Canceladas</p><strong id="nCanceladas">—</strong><small>Histórico preservado</small></div></section>
+    <div class="workgrid">
+      <section class="panel catalog"><div class="head"><div><p class="eyebrow">01 / CATÁLOGO</p><h2>Escolha um equipamento</h2></div><span class="softtag">5 itens</span></div><div id="equipamentos" class="equipment-grid"><p class="muted">Carregando catálogo…</p></div></section>
+      <section class="panel booking"><div class="head"><div><p class="eyebrow">02 / RESERVA</p><h2>Novo agendamento</h2></div><span class="miniicon">＋</span></div><form id="formReserva"><label>Equipamento<select id="equipamento" name="equipamento" required><option value="">Selecione</option></select></label><label>Nome do responsável<input name="nome" id="nome" placeholder="Ex.: Ana Oliveira" minlength="3" maxlength="60" required></label><div class="two"><label>Data<input type="date" id="data" name="data" required></label><label>Turno<select name="turno" required><option value="MANHA">Manhã</option><option value="TARDE">Tarde</option><option value="NOITE">Noite</option></select></label></div><button class="primary" type="submit">Confirmar reserva <span>↗</span></button><p class="micro">Um equipamento não pode ser reservado duas vezes no mesmo dia e turno.</p></form></section>
+    </div>
+    <section class="panel orders"><div class="head"><div><p class="eyebrow">03 / HISTÓRICO</p><h2>Reservas registradas</h2></div><button class="refresh" id="atualizar" type="button">↻ Atualizar</button></div><div id="reservas" class="reservations"><p class="muted">Carregando reservas…</p></div></section>
+    <footer><span>ReservaLab · Projeto educacional</span><span>Java + JavaScript + <strong>persistência pendente</strong></span></footer>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body></html>

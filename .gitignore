@@ -1,0 +1,14 @@
+/build/
+/out/
+/target/
+/.idea/
+*.iml
+/.classpath
+/.project
+/.settings/
+/data/
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+/lib/*.incompleto
